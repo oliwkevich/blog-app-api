@@ -20,7 +20,7 @@ async function start() {
   try {
     await mongoose.connect(process.env.DB);
 
-    app.listen(process.env.PORT, () => {
+    app.listen(process.env.PORT || 3003, () => {
       console.log(
         `Server started\n\Port: localhost:${process.env.PORT}\n\DB connect: successfull`
       );
